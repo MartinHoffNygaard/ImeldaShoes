@@ -1,3 +1,4 @@
+//Method for registering new customer from index.html
 function registerCustomer() {
     const customer = {
         firstName: $("#firstName").val(),
@@ -8,6 +9,7 @@ function registerCustomer() {
         postalCode: $("#postalCode").val(),
         password: $("#password").val()
     }
+    //checks to see if every input field is filled
     if(customer.firstName == "" || customer.lastName == "" || customer.phone == "" || customer.email == "" ||
         customer.address == "" || customer.postalCode == "" || customer.password == "") {
         if (customer.firstName == "") {
@@ -32,12 +34,13 @@ function registerCustomer() {
             document.getElementById("errorpassword").innerHTML = "You need to type password";
         }
     }
+    //Sends HTTP POST request to server with the customer object
     else {
         $.post("/register", customer, function () {
             registered();
         });
     }
-
+    //Function which is executed when a new customer is registered
     function registered() {
         document.getElementById("message").innerHTML = "";
         document.getElementById("errorfirstName").innerHTML = "";
