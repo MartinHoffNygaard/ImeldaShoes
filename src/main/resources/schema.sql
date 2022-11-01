@@ -8,5 +8,5 @@ CREATE TABLE Customer
     address VARCHAR(50) NOT NULL,
     postalCode VARCHAR(4) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    PRIMARY KEY (id)
+    PRIMARY KEY (customerID)
 );

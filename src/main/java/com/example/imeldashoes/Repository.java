@@ -9,6 +9,7 @@ public class Repository {
     @Autowired
     private JdbcTemplate db;
 
+    //Method which stores the object from client side into the database under customer
     public void createCustomer(Customer customer) {
         String sql = "INSERT INTO Customer (firstName, lastName, phone, email, address, postalCode, password) VALUES(?,?,?,?,?,?,?)";
         db.update(sql, customer.getFirstName(), customer.getLastName(), customer.getPhone(), customer.getEmail(), customer.getAddress(),
