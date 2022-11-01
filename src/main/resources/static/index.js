@@ -42,13 +42,13 @@ function registerCustomer() {
     }
     //Function which is executed when a new customer is registered
     function registered() {
-        document.getElementById("message").innerHTML = "";
-        document.getElementById("errorfirstName").innerHTML = "";
-        document.getElementById("errorlastName").innerHTML = "";
-        document.getElementById("errorphone").innerHTML = "";
-        document.getElementById("erroremail").innerHTML = "";
-        document.getElementById("erroraddress").innerHTML = "";
-        document.getElementById("errorpostalCode").innerHTML = "";
-        document.getElementById("errorpassword").innerHTML = "";
+        document.getElementById("message").innerHTML = "Customer is registered";
+        document.getElementById("firstName").value = "";
+        document.getElementById("lastName").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("address").value = "";
+        document.getElementById("postalCode").value = "";
+        document.getElementById("password").value = "";
     }
 }
