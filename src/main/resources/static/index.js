@@ -39,6 +39,13 @@ function registerCustomer() {
     }
 
     function registered() {
-        document.getElementById("message").innerHTML = "Customer is registered";
+        document.getElementById("message").innerHTML = "";
+        document.getElementById("errorfirstName").innerHTML = "";
+        document.getElementById("errorlastName").innerHTML = "";
+        document.getElementById("errorphone").innerHTML = "";
+        document.getElementById("erroremail").innerHTML = "";
+        document.getElementById("erroraddress").innerHTML = "";
+        document.getElementById("errorpostalCode").innerHTML = "";
+        document.getElementById("errorpassword").innerHTML = "";
     }
 }
